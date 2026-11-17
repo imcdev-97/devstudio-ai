@@ -1,0 +1,26 @@
+DEVSTUDIO AI - PROTOTIPO 1
+
+O QUE ESTA VERSAO FAZ
+- Apresenta a interface mobile do DevStudio AI.
+- Incorpora o editor oficial DartPad.
+- Permite executar os exemplos suportados pelo DartPad.
+- Pode ser instalada como PWA quando publicada em hospedagem HTTPS.
+
+LIMITACOES IMPORTANTES
+- O editor DartPad incorporado depende da internet e dos servicos do DartPad.
+- Esta versao ainda nao compila projetos Flutter completos com dependencias arbitrarias do pub.dev.
+- O service worker guarda apenas a estrutura do DevStudio; o editor incorporado continua online.
+- APK sera uma etapa posterior, usando a mesma aplicacao web dentro de um invólucro Android.
+
+COMO PUBLICAR PELO CELULAR
+1. Extraia este ZIP.
+2. Crie um repositorio no GitHub chamado devstudio-ai.
+3. Envie todos os arquivos e a pasta icons.
+4. No repositorio, abra Settings > Pages.
+5. Em Build and deployment, escolha Deploy from a branch.
+6. Escolha a branch main e a pasta /(root), depois Save.
+7. Aguarde a publicacao e abra o endereco fornecido pelo GitHub Pages.
+8. No Chrome Android, abra o menu ⋮ e escolha "Adicionar à tela inicial" ou "Instalar app".
+
+NOTA
+O GitHub Pages publica arquivos estaticos; nao compila Dart/Flutter. A compilacao desta primeira versao e feita pelos servicos oficiais do DartPad.
