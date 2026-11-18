@@ -2,59 +2,70 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#08111f">
-  <meta name="description" content="Ambiente de programação Dart e Flutter para celular.">
+  <meta name="description" content="DevStudio AI - ambiente de programação no celular.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon-192.png">
-  <title>DevStudio AI</title>
   <link rel="stylesheet" href="styles.css">
+  <title>DevStudio AI</title>
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">
-      <div class="logo">&lt;/&gt;</div>
-      <div><strong>DevStudio AI</strong><small>Ambiente Dart &amp; Flutter</small></div>
-    </div>
-    <span class="status"><i></i> Editor online</span>
+    <div class="brand"><div class="brand-icon">&lt;/&gt;</div><div><strong>DevStudio AI</strong><small>Seu ambiente de programação</small></div></div>
+    <span class="status"><i></i> Editor local</span>
   </header>
 
-  <main>
+  <main class="app">
     <section class="welcome">
-      <div>
-        <p class="eyebrow">SEU ESPAÇO DE DESENVOLVIMENTO</p>
-        <h1>Crie. Teste. <span>Construa.</span></h1>
-        <p class="intro">Um ambiente simples para começar a programar em Dart e experimentar interfaces Flutter.</p>
+      <div><p class="eyebrow">DEVSTUDIO • VERSÃO 2.0</p><h1>Olá, programador!</h1><p class="muted">Escreva, edite e salve seus códigos diretamente no celular.</p></div>
+      <div class="dart-mark">D</div>
+    </section>
+
+    <section class="workspace">
+      <div class="section-head">
+        <div><span class="eyebrow">ÁREA DE TRABALHO</span><h2>Editor de código</h2></div>
+        <span class="file-chip" id="fileNameLabel">main.dart</span>
       </div>
-      <button id="installButton" class="install" hidden>Instalar aplicativo</button>
-    </section>
-
-    <section class="notice">
-      <strong>Editor de código</strong>
-      <span>O editor abaixo é fornecido pelo DartPad oficial.</span>
-    </section>
-
-    <section class="editor-card">
-      <div class="editor-head">
-        <div><span class="dot"></span><strong>main.dart</strong></div>
-        <a href="https://dartpad.dev/" target="_blank" rel="noopener">Abrir DartPad ↗</a>
+      <div class="toolbar">
+        <button class="btn secondary" id="newBtn">＋ Novo</button>
+        <button class="btn secondary" id="saveBtn">Salvar</button>
+        <button class="btn primary" id="downloadBtn">Baixar .dart</button>
       </div>
-      <iframe
-        title="Editor DartPad"
-        src="https://dartpad.dev/?embed=true&theme=dark"
-        loading="lazy"
-        allow="clipboard-read; clipboard-write"
-        referrerpolicy="strict-origin-when-cross-origin">
-      </iframe>
+      <div class="editor-shell">
+        <div class="editor-top"><span class="traffic"><b></b><b></b><b></b></span><span id="editorTitle">main.dart</span><span class="language">DART</span></div>
+        <div class="editor-area">
+          <div class="line-numbers" id="lineNumbers">1</div>
+          <div class="code-wrap">
+            <pre class="highlight" aria-hidden="true"><code id="highlightCode"></code></pre>
+            <textarea id="codeEditor" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-label="Editor de código Dart"></textarea>
+          </div>
+        </div>
+        <div class="editor-foot"><span id="cursorInfo">Linha 1</span><span id="saveStatus">Salvo neste aparelho</span></div>
+      </div>
+      <div class="hint">Dica: o código fica salvo neste navegador. Baixe uma cópia para não perder seu trabalho.</div>
     </section>
 
-    <section class="features">
-      <article><b>01</b><strong>Escreva código</strong><p>Edite Dart e experimente exemplos Flutter.</p></article>
-      <article><b>02</b><strong>Execute e observe</strong><p>Use os controles do editor incorporado para executar e ver o resultado.</p></article>
-      <article><b>03</b><strong>Próximas etapas</strong><p>Vamos adicionar projetos, arquivos, salvamento e diagnóstico próprio.</p></article>
+    <section class="tools-grid">
+      <article class="tool-card">
+        <div class="tool-icon purple">▶</div><h3>Executar Dart / Flutter</h3>
+        <p>Use o DartPad oficial para executar códigos compatíveis.</p>
+        <button class="btn secondary full" id="openDartPad">Abrir DartPad</button>
+      </article>
+      <article class="tool-card">
+        <div class="tool-icon green">▤</div><h3>Meus arquivos</h3>
+        <p>Crie um arquivo Dart e salve o conteúdo no navegador.</p>
+        <button class="btn secondary full" id="renameBtn">Renomear arquivo</button>
+      </article>
     </section>
 
-    <footer>DevStudio AI · Protótipo inicial · Requer conexão com a internet</footer>
+    <section class="dartpad-panel hidden" id="dartpadPanel">
+      <div class="section-head"><div><span class="eyebrow">AMBIENTE ONLINE</span><h2>DartPad</h2></div><button class="btn secondary" id="closeDartPad">Fechar</button></div>
+      <p class="muted small">O DartPad precisa de internet. Para testar, copie seu código do editor e cole no DartPad.</p>
+      <iframe title="DartPad" src="https://dartpad.dev/?embed=true&theme=dark" loading="lazy" allow="clipboard-read; clipboard-write"></iframe>
+    </section>
+
+    <footer>DevStudio AI <span>•</span> Construindo sua próxima ideia.</footer>
   </main>
   <script src="app.js"></script>
 </body>
