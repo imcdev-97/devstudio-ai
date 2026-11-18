@@ -1,15 +1,16 @@
-DEVSTUDIO AI - VERSAO 2.0
+DEVSTUDIO AI - VERSAO 3.0
 
-Esta versão inclui:
-- Editor Dart próprio com numeração de linhas e realce básico de sintaxe.
-- Salvamento automático no armazenamento local do navegador.
-- Botão para baixar o arquivo .dart.
-- Atalho para abrir o DartPad oficial como ambiente de execução online.
-- Service worker e manifesto PWA.
+Novidades:
+- Criar, listar, abrir, renomear e excluir projetos.
+- Criar e renomear arquivos dentro do projeto.
+- Editor Dart com numeração de linhas e realce básico.
+- Salvamento automático no navegador.
+- Exportar projeto em JSON e importar arquivos Dart/TXT ou projetos JSON.
+- Baixar arquivo Dart atual e abrir DartPad.
 
-IMPORTANTE:
-O editor local ainda não compila projetos Dart/Flutter. Para executar Dart, use o DartPad incorporado, com internet. O salvamento local fica no navegador/aparelho atual; use "Baixar .dart" para criar uma cópia de segurança.
+LIMITACOES:
+Os projetos ficam no armazenamento local deste navegador/aparelho, não na nuvem. Limpar os dados do navegador pode apagar os projetos. Use Exportar projeto para guardar cópia.
+O editor ainda não compila projetos Flutter completos. Para executar Dart, use DartPad com internet.
 
-PUBLICAÇÃO:
-Envie/substitua os arquivos da raiz do repositório GitHub Pages e mantenha a pasta icons com os dois PNGs.
-Depois do commit, aguarde a publicação e atualize o site. Se o navegador mostrar a versão antiga, feche a aba e abra novamente ou limpe os dados/cache do site.
+PUBLICACAO:
+Substitua os arquivos da raiz do GitHub Pages. Mantenha icons/icon-192.png e icons/icon-512.png dentro da pasta icons.
